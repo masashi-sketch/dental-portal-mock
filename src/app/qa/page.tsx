@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import BottomNav from '../components/BottomNav';
 
 function IconBell() {
   return (
@@ -266,7 +267,7 @@ export default function QAPage() {
       : qaList.filter((q) => q.category === activeCategory);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50 pb-20 md:pb-0">
 
       {/* アナウンスバー */}
       <div className="bg-[#F0F7FF] text-[#2563EB] text-xs text-center py-2 px-4">
@@ -315,25 +316,8 @@ export default function QAPage() {
         )}
       </header>
 
-      {/* モバイル：横スクロールタブ */}
-      <div className="md:hidden bg-white border-b border-gray-100 overflow-x-auto">
-        <div className="flex gap-1 px-3 py-2 min-w-max">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs whitespace-nowrap transition-colors ${
-                item.active ? 'bg-[#2563EB] text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-              }`}
-            >
-              {item.icon}{item.label}
-            </Link>
-          ))}
-          <Link href="/" className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs whitespace-nowrap bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">
-            <IconLogout />ログアウト
-          </Link>
-        </div>
-      </div>
+      {/* ボトムナビ（モバイル） */}
+      <BottomNav active="qa" />
 
       {/* ボディ */}
       <div className="flex flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 py-6 sm:py-8 gap-6 sm:gap-8">
@@ -495,7 +479,7 @@ export default function QAPage() {
       </div>
 
       {/* フッター */}
-      <footer className="bg-gray-900 text-gray-400 mt-auto">
+      <footer className="bg-gray-900 text-gray-400 mt-auto hidden md:block">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col items-center gap-4 text-xs sm:text-sm md:flex-row md:justify-between">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 bg-[#2563EB] rounded-md flex items-center justify-center">
