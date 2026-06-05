@@ -83,7 +83,7 @@ export default function LoginPage() {
       {/* ヘッダー */}
       <header className="bg-[#1C6EA4] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <div className="text-base sm:text-lg font-bold tracking-wide">田中デンタル歯科</div>
+          <div className="text-base sm:text-lg font-bold tracking-wide">テストデンタル歯科</div>
 
           {/* デスクトップナビ */}
           <nav className="hidden md:flex items-center gap-8 text-sm">
@@ -205,8 +205,8 @@ export default function LoginPage() {
       {/* フッター */}
       <footer className="bg-[#1C6EA4] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col items-center gap-3 text-xs sm:text-sm md:flex-row md:justify-between">
-          <div className="font-bold">田中デンタル歯科</div>
-          <div className="text-white/60 text-xs text-center">© 2026 田中デンタル歯科. All Rights Reserved.</div>
+          <div className="font-bold">テストデンタル歯科</div>
+          <div className="text-white/60 text-xs text-center">© 2026 テストデンタル歯科. All Rights Reserved.</div>
           <div className="flex items-center gap-4 sm:gap-6 flex-wrap justify-center">
             <a href="#" className="hover:opacity-75 transition-opacity">プライバシーポリシー</a>
             <a href="#" className="hover:opacity-75 transition-opacity">特定商取引法</a>

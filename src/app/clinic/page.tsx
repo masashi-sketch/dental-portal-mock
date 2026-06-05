@@ -141,7 +141,7 @@ export default function ClinicPage() {
       {/* ヘッダー */}
       <header className="bg-[#1C6EA4] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <div className="text-base sm:text-lg font-bold tracking-wide">田中デンタル歯科</div>
+          <div className="text-base sm:text-lg font-bold tracking-wide">テストデンタル歯科</div>
 
           {/* デスクトップナビ */}
           <nav className="hidden md:flex items-center gap-6 text-sm">
@@ -260,7 +260,7 @@ export default function ClinicPage() {
             <div className="flex-1 text-center sm:text-left">
               <span className="inline-block bg-[#1C6EA4] text-white text-xs font-medium px-3 py-0.5 rounded-full mb-2">院長</span>
               <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-1">田中　一郎</h2>
-              <p className="text-[#1C6EA4] text-xs mb-3">歯学博士 / 日本歯科医師会会員 / 日本歯科保存学会認定医</p>
+              <p className="text-[#1C6EA4] text-xs mb-3">〇〇博士 / 〇〇会会員 / ◯◯◯◯◯◯◯◯◯◯◯◯</p>
               <p className="text-gray-600 text-sm leading-relaxed">
                 患者様お一人おひとりのお口の健康を、長期的な視点でサポートすることを大切にしています。痛みや不安を感じたときはもちろん、定期的なメンテナンスでも気軽にお越しください。スタッフ一同、安心して通っていただけるクリニックを目指してまいります。皆様のご来院を心よりお待ちしております。
               </p>
@@ -278,7 +278,7 @@ export default function ClinicPage() {
               <table className="w-full text-sm mb-4 sm:mb-5">
                 <tbody className="divide-y divide-gray-100">
                   {[
-                    ['一般歯科', '虫歯・歯周病治療'],
+                    ['一般歯科', '◯◯・◯◯◯◯'],
                     ['予防歯科', 'クリーニング・定期検診'],
                     ['審美歯科', 'ホワイトニング'],
                     ['小児歯科', 'お子様の歯科治療'],
@@ -334,8 +334,8 @@ export default function ClinicPage() {
       {/* フッター */}
       <footer className="bg-[#1C6EA4] text-white mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col items-center gap-3 text-xs sm:text-sm md:flex-row md:justify-between">
-          <div className="font-bold">田中デンタル歯科</div>
-          <div className="text-white/60 text-xs text-center">© 2026 田中デンタル歯科. All Rights Reserved.</div>
+          <div className="font-bold">テストデンタル歯科</div>
+          <div className="text-white/60 text-xs text-center">© 2026 テストデンタル歯科. All Rights Reserved.</div>
           <div className="flex items-center gap-4 sm:gap-6 flex-wrap justify-center">
             <a href="#" className="hover:opacity-75 transition-opacity">プライバシーポリシー</a>
             <a href="#" className="hover:opacity-75 transition-opacity">特定商取引法</a>
