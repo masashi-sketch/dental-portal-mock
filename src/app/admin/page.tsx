@@ -75,6 +75,18 @@ export default function AdminLoginPage() {
           </form>
         </div>
 
+        {/* 外部リンク */}
+        <div className="mt-4">
+          <a
+            href="https://childhealth.jp/?srsltid=AfmBOorq5Na8WlWqf7GTOwMNK1Y1Urk_EgwCL0extO5FY_N_gE8SUtkw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full text-center bg-gray-800 hover:bg-gray-700 border border-gray-700 text-gray-300 hover:text-white py-3 rounded-xl text-sm font-medium transition-colors"
+          >
+            チャイルドヘルラボ
+          </a>
+        </div>
+
         <p className="text-center text-gray-600 text-xs mt-6">
           © 2026 テストデンタル歯科. All Rights Reserved.
         </p>
