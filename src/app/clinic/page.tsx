@@ -50,14 +50,7 @@ function IconClinic() {
     </svg>
   );
 }
-function IconDashboard() {
-  return (
-    <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" />
-      <rect x="3" y="14" width="7" height="7" /><rect x="14" y="14" width="7" height="7" />
-    </svg>
-  );
-}
+
 function IconCalendar() {
   return (
     <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -134,10 +127,10 @@ const headerNavLinks = ['クリニック紹介', '診療案内', 'アクセス',
 const staffList = [
   {
     tab: '院長',
-    name: '山田　太郎',
+    name: '◯◯　◯◯',
     badge: '院長',
-    credentials: '〇〇博士 / 〇〇会会員 / ◯◯◯◯◯◯◯◯◯◯◯◯',
-    description: '患者様お一人おひとりのお口の健康を、長期的な視点でサポートすることを大切にしています。痛みや不安を感じたときはもちろん、定期的なメンテナンスでも気軽にお越しください。スタッフ一同、安心して通っていただけるクリニックを目指してまいります。皆様のご来院を心よりお待ちしております。',
+    credentials: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯',
+    description: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯',
     gradientFrom: '#2563EB',
     gradientTo: '#60a5fa',
     label: '院長',
@@ -146,10 +139,10 @@ const staffList = [
   },
   {
     tab: '歯科衛生士',
-    name: '山田　花子',
+    name: '◯◯　◯◯',
     badge: '歯科衛生士',
-    credentials: '歯科衛生士免許 / ◯◯衛生士会会員',
-    description: '患者様のお口の健康を守るため、丁寧なクリーニングと予防ケアを心がけています。定期検診では一人ひとりのお口の状態に合わせたアドバイスをお伝えします。気になることがあればいつでもお気軽にご相談ください。皆様のご来院をスタッフ一同お待ちしております。',
+    credentials: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯',
+    description: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯',
     gradientFrom: '#0891b2',
     gradientTo: '#67e8f9',
     label: '衛生士',
@@ -158,10 +151,10 @@ const staffList = [
   },
   {
     tab: '受付',
-    name: '山田　梅子',
+    name: '◯◯　◯◯',
     badge: '受付',
-    credentials: '医療事務資格 / ◯◯医療事務協会会員',
-    description: '来院される患者様が安心してご利用いただけるよう、笑顔で丁寧なご対応を心がけております。ご予約やお問い合わせ、保険に関するご質問など、どんな小さなことでもお気軽にお声がけください。皆様のご来院をお待ちしております。',
+    credentials: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯',
+    description: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯',
     gradientFrom: '#7c3aed',
     gradientTo: '#c4b5fd',
     label: '受付',
@@ -299,8 +292,8 @@ export default function ClinicPage() {
                   {staffList[activeTab].badge}
                 </span>
                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">{staffList[activeTab].name}</h2>
-                <p className="text-[#2563EB] text-xs mb-3">{staffList[activeTab].credentials}</p>
-                <p className="text-gray-500 text-sm leading-relaxed">{staffList[activeTab].description}</p>
+                <p className="text-[#2563EB] text-xs mb-3 break-all">{staffList[activeTab].credentials}</p>
+                <p className="text-gray-500 text-sm leading-relaxed break-all">{staffList[activeTab].description}</p>
               </div>
             </div>
           </div>
@@ -333,7 +326,7 @@ export default function ClinicPage() {
                   ['月・火・水・金', '9:00〜18:00'],
                   ['土曜日',        '9:00〜13:00'],
                   ['休診日',        '水・日・祝日'],
-                  ['電話番号',      '03-xxxx-xxxx'],
+                  ['電話番号',      '◯◯-◯◯◯◯-◯◯◯◯'],
                 ].map(([label, value]) => (
                   <div key={label} className="flex gap-4">
                     <span className="text-gray-400 w-24 shrink-0">{label}</span>
@@ -350,9 +343,9 @@ export default function ClinicPage() {
               </div>
               <div className="space-y-3 text-xs sm:text-sm">
                 {[
-                  ['住所',   '〒738-0023 広島県廿日市市宮内'],
-                  ['最寄駅', 'JR山陽本線「廿日市駅」徒歩圏内'],
-                  ['駐車場', '近隣に駐車場あり'],
+                  ['住所',   '〒◯◯◯-◯◯◯◯ ◯◯県◯◯市◯◯'],
+                  ['最寄駅', '◯◯線「◯◯駅」徒歩◯分'],
+                  ['駐車場', '◯◯◯◯◯◯◯◯'],
                 ].map(([label, value]) => (
                   <div key={label} className="flex gap-4">
                     <span className="text-gray-400 w-14 sm:w-16 shrink-0">{label}</span>

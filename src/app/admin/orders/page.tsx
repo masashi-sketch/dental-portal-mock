@@ -18,11 +18,11 @@ type Order = {
 };
 
 const initialOrders: Order[] = [
-  { id: 1, orderedAt: '2026-05-01', patient: '山田 太郎', product: 'オーラルプロバイオティクス', course: '6ヶ月', delivery: '自宅', monthlyPrice: 3582, status: '配送中', nextDelivery: '2026-07-01' },
-  { id: 2, orderedAt: '2026-05-10', patient: '佐藤 花子', product: 'カルシウム＋ビタミンD',      course: '3ヶ月', delivery: '医院', monthlyPrice: 2356, status: '確認中', nextDelivery: '2026-07-05' },
-  { id: 3, orderedAt: '2026-05-15', patient: '鈴木 一郎', product: '歯科専用 乳酸菌タブレット', course: '6ヶ月', delivery: '自宅', monthlyPrice: 1782, status: '配送中', nextDelivery: '2026-07-10' },
-  { id: 4, orderedAt: '2026-05-20', patient: '山田 太郎', product: 'マルチビタミン＆ミネラル',   course: '3ヶ月', delivery: '自宅', monthlyPrice: 2831, status: '完了',   nextDelivery: '—' },
-  { id: 5, orderedAt: '2026-06-01', patient: '伊藤 健一', product: 'オーラルプロバイオティクス', course: '6ヶ月', delivery: '医院', monthlyPrice: 3582, status: '配送中', nextDelivery: '2026-07-20' },
+  { id: 1, orderedAt: '2026-05-01', patient: '患者 A', product: '定期購入商品 A', course: '6ヶ月', delivery: '自宅', monthlyPrice: 3582, status: '配送中', nextDelivery: '2026-07-01' },
+  { id: 2, orderedAt: '2026-05-10', patient: '患者 B', product: '定期購入商品 B', course: '3ヶ月', delivery: '医院', monthlyPrice: 2356, status: '確認中', nextDelivery: '2026-07-05' },
+  { id: 3, orderedAt: '2026-05-15', patient: '患者 C', product: '定期購入商品 C', course: '6ヶ月', delivery: '自宅', monthlyPrice: 1782, status: '配送中', nextDelivery: '2026-07-10' },
+  { id: 4, orderedAt: '2026-05-20', patient: '患者 A', product: '定期購入商品 D', course: '3ヶ月', delivery: '自宅', monthlyPrice: 2831, status: '完了',   nextDelivery: '—' },
+  { id: 5, orderedAt: '2026-06-01', patient: '患者 E', product: '定期購入商品 A', course: '6ヶ月', delivery: '医院', monthlyPrice: 3582, status: '配送中', nextDelivery: '2026-07-20' },
 ];
 
 const statusColors: Record<OrderStatus, string> = {

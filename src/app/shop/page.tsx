@@ -452,7 +452,7 @@ export default function ShopPage() {
                     <Link href={`/shop/${product.id}`}>
                       <h3 className="text-sm font-bold text-gray-800 leading-snug mb-2 line-clamp-2 hover:text-[#2563EB] transition-colors">{product.name}</h3>
                     </Link>
-                    <p className="text-xs text-gray-500 leading-relaxed mb-3 line-clamp-2 sm:line-clamp-3 flex-1">{product.desc}</p>
+                    <p className="text-xs text-gray-500 leading-relaxed mb-3 line-clamp-2 sm:line-clamp-3 flex-1 break-all">{product.desc}</p>
 
                     {/* 評価 */}
                     <div className="flex items-center gap-1 mb-3">

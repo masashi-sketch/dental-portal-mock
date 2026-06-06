@@ -14,11 +14,11 @@ type Patient = {
 };
 
 const initialPatients: Patient[] = [
-  { id: 1, patientNo: 'T-00001', name: '山田 太郎', loginId: 'bgj',     password: 'dsm17938', registeredAt: '2025-01-15', status: '有効' },
-  { id: 2, patientNo: 'T-00002', name: '佐藤 花子', loginId: 'sato01',  password: 'pass1234', registeredAt: '2025-03-20', status: '有効' },
-  { id: 3, patientNo: 'T-00003', name: '鈴木 一郎', loginId: 'suzuki3', password: 'pass5678', registeredAt: '2025-05-10', status: '有効' },
-  { id: 4, patientNo: 'T-00004', name: '高橋 美咲', loginId: 'taka04',  password: 'pass9012', registeredAt: '2025-06-01', status: '無効' },
-  { id: 5, patientNo: 'T-00005', name: '伊藤 健一', loginId: 'ito05',   password: 'pass3456', registeredAt: '2026-02-28', status: '有効' },
+  { id: 1, patientNo: 'T-00001', name: '患者 A', loginId: '◯◯◯◯◯', password: '◯◯◯◯◯◯◯◯', registeredAt: '2025-01-15', status: '有効' },
+  { id: 2, patientNo: 'T-00002', name: '患者 B', loginId: '◯◯◯◯◯', password: '◯◯◯◯◯◯◯◯', registeredAt: '2025-03-20', status: '有効' },
+  { id: 3, patientNo: 'T-00003', name: '患者 C', loginId: '◯◯◯◯◯', password: '◯◯◯◯◯◯◯◯', registeredAt: '2025-05-10', status: '有効' },
+  { id: 4, patientNo: 'T-00004', name: '患者 D', loginId: '◯◯◯◯◯', password: '◯◯◯◯◯◯◯◯', registeredAt: '2025-06-01', status: '無効' },
+  { id: 5, patientNo: 'T-00005', name: '患者 E', loginId: '◯◯◯◯◯', password: '◯◯◯◯◯◯◯◯', registeredAt: '2026-02-28', status: '有効' },
 ];
 
 export default function AdminPatientsPage() {

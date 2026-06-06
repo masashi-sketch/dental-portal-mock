@@ -290,12 +290,12 @@ export default function SubscriptionPage() {
                     {/* 商品情報 */}
                     <div className="flex-1 px-4 pb-5 sm:py-5 sm:pr-5 sm:pl-0">
                       <h2 className="text-lg font-bold text-gray-900 mb-1">{product.name}</h2>
-                      <p className="text-xs text-gray-400 mb-3">{product.shortDesc}</p>
+                      <p className="text-xs text-gray-400 mb-3 break-all">{product.shortDesc}</p>
 
                       {/* 特徴リスト */}
                       <ul className="flex flex-col gap-1.5 mb-4">
                         {product.features.map((f) => (
-                          <li key={f} className="flex items-start gap-2 text-xs text-gray-600">
+                          <li key={f} className="flex items-start gap-2 text-xs text-gray-600 break-all">
                             <span className="text-indigo-500 shrink-0 mt-0.5"><IconCheck /></span>
                             {f}
                           </li>
@@ -303,7 +303,7 @@ export default function SubscriptionPage() {
                       </ul>
 
                       {/* 内容量 */}
-                      <p className="text-xs text-gray-400 mb-3">内容量：{product.volume}</p>
+                      <p className="text-xs text-gray-400 mb-3 break-all">内容量：{product.volume}</p>
 
                       {/* 価格と割引 */}
                       <div className="flex items-end gap-3 mb-4">

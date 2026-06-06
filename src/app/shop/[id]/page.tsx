@@ -311,7 +311,7 @@ export default function ProductDetailPage() {
                   </span>
                 )}
 
-                <p className="text-sm text-gray-600 leading-relaxed mb-5">{product.desc}</p>
+                <p className="text-sm text-gray-600 leading-relaxed mb-5 break-all">{product.desc}</p>
 
                 {/* 数量セレクター */}
                 <div className="flex items-center gap-3 mb-4">
@@ -385,7 +385,7 @@ export default function ProductDetailPage() {
               ].map(({ label, value }) => (
                 <div key={label} className="flex gap-4 py-3.5 text-sm">
                   <span className="text-gray-400 shrink-0 w-20">{label}</span>
-                  <span className="text-gray-700 leading-relaxed">{value}</span>
+                  <span className="text-gray-700 leading-relaxed break-all">{value}</span>
                 </div>
               ))}
             </div>

@@ -16,14 +16,14 @@ type Product = {
 };
 
 const initialProducts: Product[] = [
-  { id: 1, name: 'オーラルプロバイオティクス',    category: '定期購入',   subCategory: 'サプリメント', price: 3980, unit: '月',   status: '公開' },
-  { id: 2, name: 'カルシウム＋ビタミンD',          category: '定期購入',   subCategory: 'サプリメント', price: 2480, unit: '月',   status: '公開' },
-  { id: 3, name: '歯科専用 乳酸菌タブレット',      category: '定期購入',   subCategory: 'サプリメント', price: 1980, unit: '月',   status: '公開' },
-  { id: 4, name: 'マルチビタミン＆ミネラル',        category: '定期購入',   subCategory: 'サプリメント', price: 2980, unit: '月',   status: '公開' },
-  { id: 5, name: 'L.ロイテリ プロバイオティクス',  category: 'おすすめ商品', subCategory: 'サプリメント', price: 3980, unit: '本',   status: '公開' },
-  { id: 6, name: 'L.ロイテリ ヨーグルト 4本セット', category: 'おすすめ商品', subCategory: 'ヨーグルト',  price: 1580, unit: 'セット', status: '公開' },
-  { id: 7, name: '電動歯ブラシ スタンダード',      category: 'おすすめ商品', subCategory: '歯ブラシ',    price: 4980, unit: 'セット', status: '公開' },
-  { id: 8, name: '薬用洗口液 500ml',                category: 'おすすめ商品', subCategory: 'オーラルケア', price: 1280, unit: '個',   status: '非公開' },
+  { id: 1, name: '定期購入商品 A', category: '定期購入',   subCategory: 'サプリメント', price: 3980, unit: '月',   status: '公開' },
+  { id: 2, name: '定期購入商品 B', category: '定期購入',   subCategory: 'サプリメント', price: 2480, unit: '月',   status: '公開' },
+  { id: 3, name: '定期購入商品 C', category: '定期購入',   subCategory: 'サプリメント', price: 1980, unit: '月',   status: '公開' },
+  { id: 4, name: '定期購入商品 D', category: '定期購入',   subCategory: 'サプリメント', price: 2980, unit: '月',   status: '公開' },
+  { id: 5, name: 'おすすめ商品 A', category: 'おすすめ商品', subCategory: 'サプリメント', price: 3980, unit: '本',   status: '公開' },
+  { id: 6, name: 'おすすめ商品 B', category: 'おすすめ商品', subCategory: 'ヨーグルト',  price: 1580, unit: 'セット', status: '公開' },
+  { id: 7, name: 'おすすめ商品 C', category: 'おすすめ商品', subCategory: '歯ブラシ',    price: 4980, unit: 'セット', status: '公開' },
+  { id: 8, name: 'おすすめ商品 D', category: 'おすすめ商品', subCategory: 'オーラルケア', price: 1280, unit: '個',   status: '非公開' },
 ];
 
 export default function AdminProductsPage() {

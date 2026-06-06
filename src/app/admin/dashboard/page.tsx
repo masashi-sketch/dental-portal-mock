@@ -27,16 +27,16 @@ const stats = [
 ];
 
 const recentOrders = [
-  { patient: '山田 太郎', product: 'オーラルプロバイオティクス', course: '6ヶ月', delivery: '自宅', status: '配送中', statusColor: 'text-teal-600 bg-teal-50' },
-  { patient: '佐藤 花子', product: 'カルシウム＋ビタミンD',      course: '3ヶ月', delivery: '医院', status: '確認中', statusColor: 'text-amber-600 bg-amber-50' },
-  { patient: '鈴木 一郎', product: '歯科専用 乳酸菌タブレット', course: '6ヶ月', delivery: '自宅', status: '配送中', statusColor: 'text-teal-600 bg-teal-50' },
-  { patient: '伊藤 健一', product: 'オーラルプロバイオティクス', course: '6ヶ月', delivery: '医院', status: '配送中', statusColor: 'text-teal-600 bg-teal-50' },
+  { patient: '患者 A', product: '定期購入商品 A', course: '6ヶ月', delivery: '自宅', status: '配送中', statusColor: 'text-teal-600 bg-teal-50' },
+  { patient: '患者 B', product: '定期購入商品 B', course: '3ヶ月', delivery: '医院', status: '確認中', statusColor: 'text-amber-600 bg-amber-50' },
+  { patient: '患者 C', product: '定期購入商品 C', course: '6ヶ月', delivery: '自宅', status: '配送中', statusColor: 'text-teal-600 bg-teal-50' },
+  { patient: '患者 E', product: '定期購入商品 A', course: '6ヶ月', delivery: '医院', status: '配送中', statusColor: 'text-teal-600 bg-teal-50' },
 ];
 
 const recentNews = [
-  { date: '2026.06.01', tag: '重要',    text: '夏季休診のご案内（8/13〜8/15）',          tagColor: 'text-red-600 bg-red-50' },
-  { date: '2026.05.20', tag: 'お知らせ', text: '定期購入サービスがリニューアルしました', tagColor: 'text-blue-600 bg-blue-50' },
-  { date: '2026.05.10', tag: 'お知らせ', text: '新商品「薬用洗口液 500ml」を追加しました', tagColor: 'text-blue-600 bg-blue-50' },
+  { date: '2026.06.01', tag: '重要',    text: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯', tagColor: 'text-red-600 bg-red-50' },
+  { date: '2026.05.20', tag: 'お知らせ', text: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯', tagColor: 'text-blue-600 bg-blue-50' },
+  { date: '2026.05.10', tag: 'お知らせ', text: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯', tagColor: 'text-blue-600 bg-blue-50' },
 ];
 
 export default function AdminDashboard() {

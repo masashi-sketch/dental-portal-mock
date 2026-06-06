@@ -209,16 +209,16 @@ export default function HomePage() {
               <p className="text-xs text-gray-400 font-medium mb-3 px-1">お知らせ</p>
               <div className="flex flex-col gap-1">
                 {[
-                  { date: '2026.06.01', tag: '重要', tagColor: 'bg-red-50 text-red-500', text: '夏季休診のご案内（8/13〜8/15）' },
-                  { date: '2026.05.20', tag: 'お知らせ', tagColor: 'bg-blue-50 text-blue-500', text: '定期購入サービスがリニューアルしました' },
-                  { date: '2026.05.10', tag: 'お知らせ', tagColor: 'bg-gray-50 text-gray-500', text: '新商品「薬用洗口液 500ml」を追加しました' },
+                  { date: '2026.06.01', tag: '重要', tagColor: 'bg-red-50 text-red-500', text: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯' },
+                  { date: '2026.05.20', tag: 'お知らせ', tagColor: 'bg-blue-50 text-blue-500', text: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯' },
+                  { date: '2026.05.10', tag: 'お知らせ', tagColor: 'bg-gray-50 text-gray-500', text: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯' },
                 ].map((n) => (
                   <div key={n.text} className="flex flex-col gap-1 py-2 border-b border-gray-50 last:border-0 px-1">
                     <div className="flex items-center gap-1.5">
                       <span className="text-[10px] text-gray-400">{n.date}</span>
                       <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${n.tagColor}`}>{n.tag}</span>
                     </div>
-                    <p className="text-[11px] text-gray-600 leading-snug">{n.text}</p>
+                    <p className="text-[11px] text-gray-600 leading-snug break-all">{n.text}</p>
                   </div>
                 ))}
               </div>
@@ -233,12 +233,12 @@ export default function HomePage() {
           {/* あいさつカード */}
           <div className="bg-gradient-to-r from-[#2563EB] to-[#60a5fa] rounded-2xl p-5 sm:p-6 text-white">
             <p className="text-blue-100 text-sm mb-1">{greeting}、</p>
-            <p className="text-xl sm:text-2xl font-bold mb-3">山田　太郎 様</p>
+            <p className="text-xl sm:text-2xl font-bold mb-3">◯◯　◯◯ 様</p>
             <div className="flex items-center gap-3 bg-white/20 rounded-xl px-4 py-3 text-sm">
               <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" />
               </svg>
-              <span>次回のご予約：<span className="font-semibold">6月20日（金）10:00</span></span>
+              <span>次回のご予約：<span className="font-semibold">◯月◯日（◯）◯◯:◯◯</span></span>
             </div>
           </div>
 

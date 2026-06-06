@@ -209,9 +209,9 @@ export default function SubscriptionOrderPage() {
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4 flex items-center gap-4">
               <SupplementImageSm type={product.imageType} />
               <div className="flex-1 min-w-0">
-                <p className="text-xs text-gray-400 mb-0.5">{product.shortDesc}</p>
-                <p className="font-bold text-gray-900 text-sm leading-snug">{product.name}</p>
-                <p className="text-xs text-gray-400 mt-1">{product.volume}</p>
+                <p className="text-xs text-gray-400 mb-0.5 break-all">{product.shortDesc}</p>
+                <p className="font-bold text-gray-900 text-sm leading-snug break-all">{product.name}</p>
+                <p className="text-xs text-gray-400 mt-1 break-all">{product.volume}</p>
               </div>
               <div className="text-right shrink-0">
                 <p className="text-xs text-gray-400">月額（通常）</p>

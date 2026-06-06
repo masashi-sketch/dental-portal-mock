@@ -12,9 +12,9 @@ type NewsItem = {
 };
 
 const initialNews: NewsItem[] = [
-  { id: 1, date: '2026-06-01', tag: '重要',    text: '夏季休診のご案内（8/13〜8/15）',              status: '公開' },
-  { id: 2, date: '2026-05-20', tag: 'お知らせ', text: '定期購入サービスがリニューアルしました',        status: '公開' },
-  { id: 3, date: '2026-05-10', tag: 'お知らせ', text: '新商品「薬用洗口液 500ml」を追加しました',     status: '公開' },
+  { id: 1, date: '2026-06-01', tag: '重要',    text: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯', status: '公開' },
+  { id: 2, date: '2026-05-20', tag: 'お知らせ', text: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯', status: '公開' },
+  { id: 3, date: '2026-05-10', tag: 'お知らせ', text: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯', status: '公開' },
 ];
 
 const tagColors: Record<string, string> = {
