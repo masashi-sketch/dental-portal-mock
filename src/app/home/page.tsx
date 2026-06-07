@@ -232,8 +232,8 @@ export default function HomePage() {
                   { date: '2026.06.01', tag: '重要', tagColor: 'bg-red-50 text-red-500', text: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯' },
                   { date: '2026.05.20', tag: 'お知らせ', tagColor: 'bg-blue-50 text-blue-500', text: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯' },
                   { date: '2026.05.10', tag: 'お知らせ', tagColor: 'bg-gray-50 text-gray-500', text: '◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯' },
-                ].map((n) => (
-                  <div key={n.text} className="flex flex-col gap-1 py-2 border-b border-gray-50 last:border-0 px-1">
+                ].map((n, i) => (
+                  <div key={i} className="flex flex-col gap-1 py-2 border-b border-gray-50 last:border-0 px-1">
                     <div className="flex items-center gap-1.5">
                       <span className="text-[10px] text-gray-400">{n.date}</span>
                       <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${n.tagColor}`}>{n.tag}</span>

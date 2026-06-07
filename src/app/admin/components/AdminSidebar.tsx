@@ -159,7 +159,7 @@ function LogoBlock() {
 
 function SalesRepCard() {
   return (
-    <div className="px-3 pt-3 pb-2 border-t-2 border-sky-700">
+    <div className="shadow-xl rounded-xl overflow-hidden">
       <div className="bg-sky-800/60 border border-teal-500/40 rounded-xl overflow-hidden">
         {/* ヘッダー */}
         <div className="bg-teal-600/40 px-3 py-2 border-b border-teal-500/40">
@@ -272,7 +272,6 @@ export default function AdminSidebar({ active }: { active: AdminPage }) {
         <nav className="flex-1 px-3 py-4 flex flex-col gap-0.5 overflow-y-auto [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
           <NavItems active={active} unreadCounts={unreadCounts} />
         </nav>
-        <SalesRepCard />
         {portalSection()}
         {logoutSection()}
       </aside>
@@ -326,10 +325,14 @@ export default function AdminSidebar({ active }: { active: AdminPage }) {
         <nav className="flex-1 px-3 py-4 flex flex-col gap-0.5 overflow-y-auto [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
           <NavItems active={active} onNavClick={() => setMobileOpen(false)} unreadCounts={unreadCounts} />
         </nav>
-        <SalesRepCard />
         {portalSection(() => setMobileOpen(false))}
         {logoutSection(() => setMobileOpen(false))}
       </aside>
+
+      {/* ── 営業担当カード：画面右下に常時固定 ── */}
+      <div className="fixed bottom-4 right-4 z-50 w-56">
+        <SalesRepCard />
+      </div>
     </>
   );
 }
