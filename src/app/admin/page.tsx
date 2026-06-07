@@ -24,7 +24,7 @@ export default function AdminLoginPage() {
               <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
             </svg>
           </div>
-          <span className="text-white font-bold text-6xl tracking-tight">テストデンタル歯科</span>
+          <span className="text-white font-bold text-2xl sm:text-4xl md:text-6xl tracking-tight">テストデンタル歯科</span>
         </div>
       </header>
 
