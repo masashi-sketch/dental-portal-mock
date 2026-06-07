@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
 
 export type AdminPage = 'dashboard' | 'news' | 'patients' | 'orders' | 'products' | 'commission' | 'campaign' | 'biogaia';
 
@@ -43,6 +44,12 @@ function IconExternal() {
 function IconChildHealth() {
   return <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2z" /><path d="M12 12c-5 0-9 2.5-9 5v1h18v-1c0-2.5-4-5-9-5z" /></svg>;
 }
+function IconMenu() {
+  return <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>;
+}
+function IconClose() {
+  return <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>;
+}
 
 const navItems: { key: AdminPage; label: string; href: string; icon: React.ReactNode; dividerBefore?: boolean }[] = [
   { key: 'dashboard',  label: 'ダッシュボード',   href: '/admin/dashboard',   icon: <IconDashboard /> },
@@ -61,88 +68,171 @@ const externalLinks = [
   { label: 'チャイルドヘルラボ', href: 'https://childhealth.jp/?srsltid=AfmBOorq5Na8WlWqf7GTOwMNK1Y1Urk_EgwCL0extO5FY_N_gE8SUtkw', icon: <IconChildHealth /> },
 ];
 
-export default function AdminSidebar({ active }: { active: AdminPage }) {
+function NavItems({ active, onNavClick }: { active: AdminPage; onNavClick?: () => void }) {
   return (
-    <aside className="hidden md:flex w-64 shrink-0 flex-col bg-sky-900 min-h-screen">
-      {/* ロゴ */}
-      <div className="px-5 py-5 border-b border-sky-800/50">
-        <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 bg-sky-400 rounded-lg flex items-center justify-center">
-            <svg width="18" height="18" fill="none" stroke="white" strokeWidth="2.5" viewBox="0 0 24 24">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-            </svg>
-          </div>
-          <div>
-            <p className="text-white font-bold text-base leading-tight">テストデンタル</p>
-            <p className="text-sky-300/80 text-xs">管理ポータル</p>
-          </div>
-        </div>
-      </div>
-
-      {/* ナビゲーション */}
-      <nav className="flex-1 px-3 py-4 flex flex-col gap-0.5">
-        <p className="text-sky-300/60 text-xs font-semibold tracking-widest px-3 pb-2">MENU</p>
-        {navItems.map((item) => (
-          <div key={item.key}>
-            {item.dividerBefore && (
-              <div className="my-2 border-t-4 border-sky-800/70" />
+    <>
+      <p className="text-sky-300/60 text-xs font-semibold tracking-widest px-3 pb-2">MENU</p>
+      {navItems.map((item) => (
+        <div key={item.key}>
+          {item.dividerBefore && (
+            <div className="my-2 border-t-4 border-sky-800/70" />
+          )}
+          <Link
+            href={item.href}
+            onClick={onNavClick}
+            className={`flex items-center gap-3 px-3 py-3 rounded-xl text-lg font-medium transition-colors ${
+              active === item.key
+                ? 'bg-sky-400/20 text-sky-100'
+                : 'text-sky-100/80 hover:bg-sky-800/50 hover:text-white'
+            }`}
+          >
+            <span className={active === item.key ? 'text-sky-300' : 'text-sky-300/70'}>
+              {item.icon}
+            </span>
+            {item.label}
+            {active === item.key && (
+              <span className="ml-auto w-2 h-2 rounded-full bg-sky-400" />
             )}
-            <Link
-              href={item.href}
-              className={`flex items-center gap-3 px-3 py-3 rounded-xl text-lg font-medium transition-colors ${
-                active === item.key
-                  ? 'bg-sky-400/20 text-sky-100'
-                  : 'text-sky-100/80 hover:bg-sky-800/50 hover:text-white'
-              }`}
-            >
-              <span className={active === item.key ? 'text-sky-300' : 'text-sky-300/70'}>
-                {item.icon}
-              </span>
-              {item.label}
-              {active === item.key && (
-                <span className="ml-auto w-2 h-2 rounded-full bg-sky-400" />
-              )}
-            </Link>
-          </div>
+          </Link>
+        </div>
+      ))}
+
+      <div className="mt-4 pt-4 border-t border-sky-800/50">
+        <p className="text-sky-300/60 text-xs font-semibold tracking-widest px-3 pb-2">LINKS</p>
+        {externalLinks.map((item) => (
+          <a
+            key={item.label}
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 px-3 py-3 rounded-xl text-lg font-medium text-sky-100/80 hover:bg-sky-800/50 hover:text-white transition-colors"
+          >
+            <span className="text-sky-300/70">{item.icon}</span>
+            <span className="flex-1 truncate">{item.label}</span>
+            <span className="text-sky-400/60 shrink-0"><IconExternal /></span>
+          </a>
         ))}
-
-        {/* 外部リンクセクション */}
-        <div className="mt-4 pt-4 border-t border-sky-800/50">
-          <p className="text-sky-300/60 text-xs font-semibold tracking-widest px-3 pb-2">LINKS</p>
-          {externalLinks.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 px-3 py-3 rounded-xl text-lg font-medium text-sky-100/80 hover:bg-sky-800/50 hover:text-white transition-colors"
-            >
-              <span className="text-sky-300/70">{item.icon}</span>
-              <span className="flex-1 truncate">{item.label}</span>
-              <span className="text-sky-400/60 shrink-0"><IconExternal /></span>
-            </a>
-          ))}
-        </div>
-      </nav>
-
-      {/* ログアウト */}
-      <div className="px-3 py-4 border-t border-sky-800/50">
-        <div className="flex items-center gap-3 px-3 py-2 mb-2">
-          <div className="w-9 h-9 rounded-full bg-sky-400/20 flex items-center justify-center text-sky-300 text-sm font-bold">
-            A
-          </div>
-          <div>
-            <p className="text-white text-sm font-semibold">管理者</p>
-            <p className="text-sky-300/70 text-xs">clinic</p>
-          </div>
-        </div>
-        <Link
-          href="/admin"
-          className="flex items-center gap-3 px-3 py-3 rounded-xl text-base text-sky-100/80 hover:bg-sky-800/50 hover:text-white transition-colors"
-        >
-          <IconLogout />ログアウト
-        </Link>
       </div>
-    </aside>
+    </>
+  );
+}
+
+function LogoBlock() {
+  return (
+    <div className="flex items-center gap-2.5">
+      <div className="w-9 h-9 bg-sky-400 rounded-lg flex items-center justify-center">
+        <svg width="18" height="18" fill="none" stroke="white" strokeWidth="2.5" viewBox="0 0 24 24">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+        </svg>
+      </div>
+      <div>
+        <p className="text-white font-bold text-base leading-tight">テストデンタル</p>
+        <p className="text-sky-300/80 text-xs">管理ポータル</p>
+      </div>
+    </div>
+  );
+}
+
+export default function AdminSidebar({ active }: { active: AdminPage }) {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  return (
+    <>
+      {/* ── デスクトップ用サイドバー ── */}
+      <aside className="hidden md:flex w-64 shrink-0 flex-col bg-sky-900 min-h-screen">
+        <div className="px-5 py-5 border-b border-sky-800/50">
+          <LogoBlock />
+        </div>
+        <nav className="flex-1 px-3 py-4 flex flex-col gap-0.5">
+          <NavItems active={active} />
+        </nav>
+        <div className="px-3 py-4 border-t border-sky-800/50">
+          <div className="flex items-center gap-3 px-3 py-2 mb-2">
+            <div className="w-9 h-9 rounded-full bg-sky-400/20 flex items-center justify-center text-sky-300 text-sm font-bold">
+              A
+            </div>
+            <div>
+              <p className="text-white text-sm font-semibold">管理者</p>
+              <p className="text-sky-300/70 text-xs">clinic</p>
+            </div>
+          </div>
+          <Link
+            href="/admin"
+            className="flex items-center gap-3 px-3 py-3 rounded-xl text-base text-sky-100/80 hover:bg-sky-800/50 hover:text-white transition-colors"
+          >
+            <IconLogout />ログアウト
+          </Link>
+        </div>
+      </aside>
+
+      {/* ── モバイル用固定トップバー ── */}
+      <div className="md:hidden fixed top-0 left-0 right-0 z-30 bg-sky-900 h-14 flex items-center px-4 gap-3 shadow-md">
+        <button
+          onClick={() => setMobileOpen(true)}
+          className="text-white p-2 -ml-1 rounded-lg hover:bg-sky-800 transition-colors"
+          aria-label="メニューを開く"
+        >
+          <IconMenu />
+        </button>
+        <div className="w-7 h-7 bg-sky-400 rounded-lg flex items-center justify-center shrink-0">
+          <svg width="14" height="14" fill="none" stroke="white" strokeWidth="2.5" viewBox="0 0 24 24">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+          </svg>
+        </div>
+        <p className="text-white font-bold text-base truncate">テストデンタル 管理ポータル</p>
+      </div>
+
+      {/* ── モバイルドロワー：背景オーバーレイ ── */}
+      <div
+        className={`md:hidden fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 ${
+          mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={() => setMobileOpen(false)}
+      />
+
+      {/* ── モバイルドロワー：メニュー本体 ── */}
+      <aside
+        className={`md:hidden fixed top-0 left-0 h-full w-72 max-w-[85vw] bg-sky-900 z-50 flex flex-col transition-transform duration-300 ease-in-out ${
+          mobileOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        {/* ドロワーヘッダー */}
+        <div className="flex items-center justify-between px-5 py-4 border-b border-sky-800/50">
+          <LogoBlock />
+          <button
+            onClick={() => setMobileOpen(false)}
+            className="text-sky-300 hover:text-white p-1 rounded-lg hover:bg-sky-800 transition-colors ml-2 shrink-0"
+            aria-label="メニューを閉じる"
+          >
+            <IconClose />
+          </button>
+        </div>
+
+        {/* ナビゲーション */}
+        <nav className="flex-1 px-3 py-4 flex flex-col gap-0.5 overflow-y-auto">
+          <NavItems active={active} onNavClick={() => setMobileOpen(false)} />
+        </nav>
+
+        {/* ログアウト */}
+        <div className="px-3 py-4 border-t border-sky-800/50">
+          <div className="flex items-center gap-3 px-3 py-2 mb-2">
+            <div className="w-9 h-9 rounded-full bg-sky-400/20 flex items-center justify-center text-sky-300 text-sm font-bold">
+              A
+            </div>
+            <div>
+              <p className="text-white text-sm font-semibold">管理者</p>
+              <p className="text-sky-300/70 text-xs">clinic</p>
+            </div>
+          </div>
+          <Link
+            href="/admin"
+            onClick={() => setMobileOpen(false)}
+            className="flex items-center gap-3 px-3 py-3 rounded-xl text-base text-sky-100/80 hover:bg-sky-800/50 hover:text-white transition-colors"
+          >
+            <IconLogout />ログアウト
+          </Link>
+        </div>
+      </aside>
+    </>
   );
 }

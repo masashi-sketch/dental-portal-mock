@@ -61,10 +61,10 @@ export default function CommissionPage() {
     <div className="min-h-screen flex bg-sky-50">
       <AdminSidebar active="commission" />
 
-      <div className="flex-1 flex flex-col min-w-0">
-        <header className="bg-white border-b border-sky-100 px-6 py-4 shadow-sm">
+      <div className="flex-1 flex flex-col min-w-0 pt-14 md:pt-0">
+        <header className="bg-white border-b border-sky-100 px-4 sm:px-6 py-4 shadow-sm">
           <h1 className="text-slate-800 font-bold text-xl">コミッション管理</h1>
-          <p className="text-slate-600 text-sm mt-0.5">医院様の成長と弊社の収益を一画面で管理します</p>
+          <p className="text-slate-600 text-sm mt-0.5">患者様の笑顔のために、ロイテリ菌を届けたい。</p>
         </header>
 
         <main className="flex-1 p-5 sm:p-6 flex flex-col gap-6 bg-sky-50">

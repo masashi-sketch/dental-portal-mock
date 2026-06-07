@@ -83,8 +83,8 @@ export default function AdminProductsPage() {
     <div className="min-h-screen flex bg-sky-50">
       <AdminSidebar active="products" />
 
-      <div className="flex-1 flex flex-col min-w-0">
-        <header className="bg-white border-b border-sky-100 px-6 py-4 flex items-center justify-between shadow-sm">
+      <div className="flex-1 flex flex-col min-w-0 pt-14 md:pt-0">
+        <header className="bg-white border-b border-sky-100 px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between gap-y-3 shadow-sm">
           <div>
             <h1 className="text-slate-800 font-bold text-xl">商品管理</h1>
             <p className="text-slate-600 text-sm mt-0.5">定期購入・おすすめ商品を管理します</p>
