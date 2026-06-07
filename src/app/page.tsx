@@ -13,15 +13,19 @@ export default function PatientLoginPage() {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div
+      className="min-h-screen flex flex-col relative overflow-hidden"
+      style={{ backgroundImage: 'url(/patient-login-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center top', backgroundRepeat: 'no-repeat' }}
+    >
+      <div className="absolute inset-0 bg-gray-900/50" />
 
       {/* アナウンスバー */}
-      <div className="bg-[#F0F7FF] text-[#2563EB] text-xs text-center py-2 px-4">
+      <div className="relative z-10 bg-sky-900/70 text-sky-200 text-xs text-center py-2 px-4">
         医師監修のもと提供される患者様専用のポータルサービスです
       </div>
 
       {/* ヘッダー */}
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+      <header className="relative z-10 bg-white/10 backdrop-blur-sm border-b border-white/20 sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-[#2563EB] rounded-lg flex items-center justify-center">
@@ -29,13 +33,13 @@ export default function PatientLoginPage() {
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
               </svg>
             </div>
-            <span className="text-gray-900 font-bold text-lg tracking-tight">テストデンタル歯科</span>
+            <span className="text-white font-bold text-lg tracking-tight">テストデンタル歯科</span>
           </div>
-          <nav className="hidden md:flex items-center gap-8 text-sm text-gray-600">
-            {navLinks.map((l) => <a key={l} href="#" className="hover:text-[#2563EB] transition-colors">{l}</a>)}
+          <nav className="hidden md:flex items-center gap-8 text-sm text-white/80">
+            {navLinks.map((l) => <a key={l} href="#" className="hover:text-white transition-colors">{l}</a>)}
           </nav>
           <button
-            className="md:hidden text-gray-500 hover:text-[#2563EB] transition-colors"
+            className="md:hidden text-white/80 hover:text-white transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -47,32 +51,28 @@ export default function PatientLoginPage() {
           </button>
         </div>
         {menuOpen && (
-          <div className="md:hidden border-t border-gray-100 bg-white px-4 pb-4">
+          <div className="md:hidden border-t border-white/20 bg-white/10 backdrop-blur-sm px-4 pb-4">
             {navLinks.map((l) => (
-              <a key={l} href="#" className="block py-3 text-sm text-gray-600 border-b border-gray-50 hover:text-[#2563EB] transition-colors">{l}</a>
+              <a key={l} href="#" className="block py-3 text-sm text-white/80 border-b border-white/10 hover:text-white transition-colors">{l}</a>
             ))}
           </div>
         )}
       </header>
 
       {/* メイン */}
-      <main
-        className="flex-1 flex items-center justify-center px-4 sm:px-6 py-10 md:py-16 relative overflow-hidden"
-        style={{ backgroundImage: 'url(/login-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center top', backgroundRepeat: 'no-repeat' }}
-      >
-        <div className="absolute inset-0 bg-white/30" />
-        <div className="relative z-10 max-w-5xl w-full flex flex-col md:flex-row items-center gap-10 md:gap-16">
+      <main className="relative z-10 flex-1 flex items-center justify-center px-4 sm:px-6 py-10 md:py-16">
+        <div className="max-w-5xl w-full flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
           {/* 左：キャッチ */}
           <div className="flex-1 w-full text-center md:text-left">
-            <span className="inline-block bg-[#EFF6FF] text-[#2563EB] text-xs font-semibold px-3 py-1 rounded-full mb-4 tracking-wider">
+            <span className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 tracking-wider">
               Patient Portal
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
               患者様専用<br />
-              <span className="text-[#2563EB]">ポータルサイト</span>
+              <span className="text-sky-300">ポータルサイト</span>
             </h1>
-            <p className="text-gray-500 text-sm leading-relaxed">
+            <p className="text-white/70 text-sm leading-relaxed">
               予約管理・診療情報・定期購入など<br className="hidden sm:block" />
               患者様向けサービスをご利用いただけます。
             </p>
@@ -126,7 +126,7 @@ export default function PatientLoginPage() {
       </main>
 
       {/* フッター */}
-      <footer className="bg-gray-900 text-gray-400">
+      <footer className="relative z-10 bg-gray-900/80 text-gray-400">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col items-center gap-3 text-xs md:flex-row md:justify-between">
           <span className="text-white font-semibold">テストデンタル歯科</span>
           <span className="text-gray-500">© 2026 テストデンタル歯科. All Rights Reserved.</span>
